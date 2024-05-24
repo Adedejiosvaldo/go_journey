@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+
 func main()  {
-	fmt.Println("Card Game")
+card:="Ace of spades"
+card="Ace of spadess"
+	fmt.Println(card)
 }
