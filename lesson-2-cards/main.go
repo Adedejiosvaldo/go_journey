@@ -2,14 +2,23 @@ package main
 
 import "fmt"
 
+// func main() {
+// 	var varLong string = "Long Form of Variable Declaration"
+// 	// Short form on var delcaration
+// 	varShort := "Short form of variable declaration"
+// 	// resassignin a variable
+// 	varShort = "Reassigned var"
 
-func main()  {
-	var varLong string ="Long Form of Variable Declaration"
-	// Short form on var delcaration
-	varShort:= "Short form of variable declaration"
-	// resassignin a variable
-	varShort="Reassigned var"
+//		fmt.Println(varLong)
+//		fmt.Println(varShort)
+//	}
 
-	fmt.Println(varLong)
-	fmt.Println(varShort)
+func main() {
+	card := newCard()
+
+	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Five of Diamonds "
 }
