@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func main() {
 // 	var varLong string = "Long Form of Variable Declaration"
 // 	// Short form on var delcaration
@@ -15,16 +13,13 @@ import "fmt"
 
 func main() {
 	// Slice of strings
-	cards := []string{"Ace of Diamonds", newCard()}
+	cards := deck{"Ace of Diamonds", newCard()}
 
 	// Append to a slice
 	cards = append(cards, "Six of Spades")
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards.print()
 
-	fmt.Println(cards)
 }
 
 func newCard() string {
