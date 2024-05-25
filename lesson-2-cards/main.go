@@ -13,11 +13,7 @@ package main
 
 func main() {
 	// Slice of strings
-	cards := deck{"Ace of Diamonds", newCard()}
-
-	// Append to a slice
-	cards = append(cards, "Six of Spades")
-
+	cards := newDeck()
 	cards.print()
 
 }
