@@ -27,3 +27,9 @@ func newDeck() deck {
 
 	return cards
 }
+
+func deal(cards deck, cardRange uint) (deck, deck) {
+	// dealtCard := cards[0:cardRange]
+	// notDealthWith := cards[cardRange:]
+	return cards[:cardRange], cards[cardRange:]
+}
