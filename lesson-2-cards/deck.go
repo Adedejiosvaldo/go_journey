@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Create new type of deck
 // which is a slice of strings
@@ -32,4 +35,8 @@ func deal(cards deck, cardRange uint) (deck, deck) {
 	// dealtCard := cards[0:cardRange]
 	// notDealthWith := cards[cardRange:]
 	return cards[:cardRange], cards[cardRange:]
+}
+
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
 }
