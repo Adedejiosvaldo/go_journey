@@ -14,9 +14,14 @@ package main
 
 func main() {
 	// Slice of strings
-	cards := newDeck()
+	// cards := newDeck()
 
-	cards.saveToFile("my_deck")
+	// Save to file
+	// cards.saveToFile("my_deck")
+	cards := newDeckFromFIle("my_desck")
+
+	cards.print()
+
 }
 
 func newCard() string {

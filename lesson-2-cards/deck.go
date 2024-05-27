@@ -45,3 +45,16 @@ func (d deck) toString() string {
 func (d deck) saveToFile(filename string) error {
 	return os.WriteFile(filename, []byte(d.toString()), 0666)
 }
+
+func newDeckFromFIle(filename string) deck {
+	bytes, err := os.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Error", err)
+		os.Exit(1)
+	}
+	// Bytes to string
+	// string(bs) -> converts bytes to strings
+	arrayOfString := strings.Split(string(bytes), ",")
+	// converts []strings to type of dec
+	return deck(arrayOfString)
+}
