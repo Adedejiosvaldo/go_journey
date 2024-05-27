@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // func main() {
 // 	var varLong string = "Long Form of Variable Declaration"
 // 	// Short form on var delcaration
@@ -11,13 +9,14 @@ import "fmt"
 
 //		fmt.Println(varLong)
 //		fmt.Println(varShort)
+// fmt.Println(cards.toString())
 //	}
 
 func main() {
 	// Slice of strings
 	cards := newDeck()
 
-	fmt.Println(cards.toString())
+	cards.saveToFile("my_deck")
 }
 
 func newCard() string {
