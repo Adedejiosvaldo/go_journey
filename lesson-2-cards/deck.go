@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // Create new type of deck
@@ -61,10 +62,20 @@ func newDeckFromFIle(filename string) deck {
 }
 
 func (d deck) shuffle() {
+	// Uniuq time seeed
+	time := time.Now().UnixNano()
+	fmt.Println(time)
+
+	// Creating a new source
+	source := rand.NewSource(time)
+
+	// Source is used as a basis for our random generator
+	r := rand.New(source)
 	// Not
 	for index := range d {
 		// Len -> lenght of a slice
-		newPosition := rand.Intn(len(d) - 1)
+		newPosition := r.Intn(len(d) - 1)
+
 		// Take whatever is at newPosition and assign it to d[index]
 		// Take whatever is at d[index], and assign it to d[newPosition]
 		d[index], d[newPosition] = d[newPosition], d[index]
