@@ -14,12 +14,16 @@ package main
 
 func main() {
 	// Slice of strings
-	// cards := newDeck()
+	// Generates a new deck of cards
+	cards := newDeck()
+	// Deal cards
+	// dealtCards := deal(cards, 4)
 
 	// Save to file
 	// cards.saveToFile("my_deck")
-	cards := newDeckFromFIle("my_desck")
 
+	cards.shuffle()
+	// loadedCards := newDeckFromFIle("my_deck")
 	cards.print()
 
 }
