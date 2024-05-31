@@ -5,17 +5,20 @@ import "fmt"
 type Person struct {
 	firstName string
 	lastName  string
+	contact   contactInfo
+}
+
+type contactInfo struct {
+	email string
+	zip   int
 }
 
 func main() {
-	alex := Person{"Alex", "Anderson"}
+	alex := Person{firstName: "Alex", lastName: "OnGod", contact: contactInfo{email: "Adedej", zip: 10000}}
 
-	fmt.Println(alex)
-	okc := Person{firstName: alex.lastName, lastName: alex.lastName}
+	fmt.Printf("%+v", alex)
+	// okc := Person{firstName: alex.lastName, lastName: alex.lastName}
 
 	// Upating a struct
-	okc.firstName = "The Name Changed"
-
-	fmt.Println(okc)
 
 }
