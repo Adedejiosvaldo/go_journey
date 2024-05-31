@@ -10,7 +10,12 @@ type Person struct {
 func main() {
 	alex := Person{"Alex", "Anderson"}
 
+	fmt.Println(alex)
 	okc := Person{firstName: alex.lastName, lastName: alex.lastName}
+
+	// Upating a struct
+	okc.firstName = "The Name Changed"
+
 	fmt.Println(okc)
 
 }
