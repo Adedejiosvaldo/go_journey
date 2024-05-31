@@ -17,6 +17,8 @@ func main() {
 	// Embedding a struct
 	alex := Person{firstName: "Alex", lastName: "OnGod", contactInfo: contactInfo{email: "Adedej", zip: 10000}}
 
+	jimPointer := &alex
+	jimPointer.updateName("Jimmy")
 	alex.print()
 
 	// okc := Person{firstName: alex.lastName, lastName: alex.lastName}
@@ -29,6 +31,6 @@ func (p Person) print() {
 	fmt.Printf("%+v", p)
 }
 
-func (p Person) updateName(firstName string) {
-	p.firstName = firstName
+func (pointerToPerson *Person) updateName(firstName string) {
+	(*pointerToPerson).firstName = firstName
 }
