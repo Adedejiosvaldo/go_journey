@@ -37,3 +37,6 @@ func TestSaveToDeckAndNewDeckFromFile(t *testing.T) {
 
 	os.Remove("_decktesting")
 }
+func doNotKnwButCool(t *testing.T) {
+	t.Errorf("We are good")
+}

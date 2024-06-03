@@ -23,6 +23,6 @@ func main() {
 func printKeys(m map[string]string) {
 
 	for color, card := range m {
-		fmt.Print("Key: " + color + ", value " + card)
+		fmt.Print("Key " + color + ", value " + card)
 	}
 }

@@ -29,6 +29,7 @@ func newDeck() deck {
 		for _, value := range cardValues {
 			cards = append(cards, card+" of "+value)
 		}
+
 	}
 
 	return cards
@@ -54,6 +55,9 @@ func newDeckFromFIle(filename string) deck {
 		fmt.Println("Error", err)
 		os.Exit(1)
 	}
+
+	hello := map[string]string{"red": "hello"}
+	fmt.Println(hello)
 	// Bytes to string
 	// string(bs) -> converts bytes to strings
 	arrayOfString := strings.Split(string(bytes), ",")
